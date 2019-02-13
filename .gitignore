@@ -1,0 +1,7 @@
+node_modules
+*.lock
+.DS_Store
+**/*.js
+**/*.js.map
+features/**/*.js
+features/**/*.d.ts

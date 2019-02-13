@@ -1,0 +1,43 @@
+{
+  "name": "robotic-hoover",
+  "version": "0.0.1",
+  "description": "Robotic hoover implementation",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "tsc && cucumber-js features/",
+    "format": "prettier --write './**/*.ts'",
+    "lint": "tslint -p tsconfig.json --fix"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm t && npm run format && npm run lint"
+    }
+  },
+  "author": "Andrius Laurinenas",
+  "repository": "https://github.com/laurinenas/robotic-hoover",
+  "bugs": "https://github.com/laurinenas/robotic-hoover/issues",
+  "license": "ISC",
+  "types": "index.d.ts",
+  "files": [
+    "index.js",
+    "index.ts",
+    "index.d.ts"
+  ],
+  "prepare": "npm run build",
+  "prepublishOnly": "npm t",
+  "preversion": "npm t && npm run lint",
+  "postversion": "git push && git push --tags",
+  "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/cucumber": "^4.0.4",
+    "chai": "^4.2.0",
+    "cucumber": "^5.1.0",
+    "husky": "^1.3.1",
+    "prettier": "^1.16.4",
+    "tslint": "^5.12.1",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-consistent-codestyle": "^1.15.0",
+    "typescript": "^3.3.3"
+  }
+}

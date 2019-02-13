@@ -1,0 +1,7 @@
+{
+	"extends": ["tslint-consistent-codestyle", "tslint-config-prettier"],
+	"rules": {
+		"only-arrow-functions": false,
+		"no-console": true
+	}
+}
