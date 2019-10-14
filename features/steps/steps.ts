@@ -1,6 +1,6 @@
-import {deepEqual, equal} from "assert";
-import {Given, Then, When} from "cucumber";
-import {Direction, Hoover} from "../../index";
+import { deepEqual, equal } from "assert";
+import { Given, Then, When } from "cucumber";
+import { Direction, Hoover } from "../../index";
 
 const init = {
   dirty: [[1, 1], [2, 2], [3, 3], [1, 2], [1, 4], [0, 2]],
